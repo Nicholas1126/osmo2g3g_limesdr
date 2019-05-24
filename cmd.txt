@@ -1,0 +1,16 @@
+osmo-hlr -l nitb/hlr.db -c nitb/osmo-hlr.cfg
+osmo-msc -c nitb/osmo-msc.cfg
+osmo-mgw -c nitb/osmo-mgw-for-msc.cfg
+osmo-mgw -c nitb/osmo-mgw-for-bsc.cfg
+osmo-ggsn -c nitb/osmo-ggsn.cfg
+osmo-sgsn -c nitb/osmo-sgsn.cfg
+osmo-stp -c nitb/osmo-stp.cfg
+osmo-bsc -c nitb/osmo-bsc.cfg
+osmo-hnbgw -c nitb/osmo-hnbgw.cfg
+# on a 2G sysmoBTS:
+osmo-bts-sysmo -c nitb/osmo-bts.cfg -s -M
+
+# on a 2G limesdr:
+osmo-bts-trx -c nitb/osmo-bts-limesdr.cfg
+
+osmo-pcu -c nitb/osmo-pcu.cfg
